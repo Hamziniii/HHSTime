@@ -66,7 +66,7 @@ let periods = {
     }
 }
 
-let now = new Date().setHours(7, 43, 6, 0)
+let now = new Date()
 let currentPeriod = 1
 let nextPeriod
 let timeLeft = 0
