@@ -1,20 +1,19 @@
 javascript:(function(){
-a = '' // PUT CLASSES HERE SEPERATED BY SPACE AND COLON
-b = '' // PUT YOUR ROOM NUMBERS HERE AND SEPERATE THEM BY A SPACE AND COLON
-let classes = a.split(", ")
-let rooms = b.split(", ")
-// let classes = ['PLTW', 'AP Physics 1', 'Algebra 2 Honors', 'French 1', 'Lunch', 'Health', 'English 1 Honors', 'AP Human Geography']
-// let rooms = ['W1317', 'W1016', 'W2009', 'C1020', 'W1203', 'W1307', 'W1200', 'W1208']
+a = '';
+b = ''; 
+let classes = a.split(", ");
+let rooms = b.split(", ");
+
 if(classes.length != 8){
-    alert("Beep Boop, you do not have eight classes, please fix it")
-    return
+    alert("Beep Boop, you do not have eight classes, please fix it");
+    return;
 }
 if(rooms.length != 8){
-    alert("Beep Boop, you do not have eight rooms, please fix it")
-    return
+    alert("Beep Boop, you do not have eight rooms, please fix it");
+    return;
 }
 
-let num = 0
+let num = 0;
 let periods = {
     1: {
         room: rooms[num],
@@ -64,26 +63,26 @@ let periods = {
         start: new Date().setHours(13, 39, 0, 0),
         end: new Date().setHours(14, 26, 0, 0)
     }
-}
+};
 
-let now = new Date()
-let currentPeriod = 1
-let nextPeriod
-let timeLeft = 0
+let now = new Date();
+let currentPeriod = 1;
+let nextPeriod;
+let timeLeft = 0;
 
 try {
     while(!(period => (now >= periods[period].start && now < periods[period].end))(currentPeriod)){
-        currentPeriod++
+        currentPeriod++;
     }   
 } catch (error) {
-    console.log('Your out of school!')
-    return
+    console.log('Your out of school!');
+    return;
 }
 
-nextPeriod = currentPeriod != 8 ? currentPeriod + 1 : null
+nextPeriod = currentPeriod != 8 ? currentPeriod + 1 : null;
 
-timeLeft = Math.abs(now - periods[currentPeriod].end)
-timeLeft = ((millis) => {  var minutes = Math.floor(millis / 60000);var seconds = ((millis % 60000) / 1000).toFixed(0);return minutes + ':' + (seconds < 10 ? '0' : '') + seconds;})(timeLeft)
+timeLeft = Math.abs(now - periods[currentPeriod].end);
+timeLeft = ((millis) => {  var minutes = Math.floor(millis / 60000);var seconds = ((millis % 60000) / 1000).toFixed(0);return minutes + ':' + (seconds < 10 ? '0' : '') + seconds;})(timeLeft);
 
-alert(nextPeriod ? `Period: ${currentPeriod}, \nClass: ${periods[currentPeriod].name} ${periods[currentPeriod].room}, \nTime Left: ${timeLeft}, \nNext Class: ${periods[nextPeriod].name} ${periods[nextPeriod].room}` : `Period: ${currentPeriod}, \nClass: ${periods[currentPeriod].name}, \nTime Left: ${timeLeft}`)
-})()
+alert(nextPeriod ? `Period: ${currentPeriod}, \nClass: ${periods[currentPeriod].name} ${periods[currentPeriod].room}, \nTime Left: ${timeLeft}, \nNext Class: ${periods[nextPeriod].name} ${periods[nextPeriod].room}` : `Period: ${currentPeriod}, \nClass: ${periods[currentPeriod].name}, \nTime Left: ${timeLeft}`);
+})();
