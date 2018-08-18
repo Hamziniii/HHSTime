@@ -1,4 +1,4 @@
-(function(){
+javascript:(function(){
 a = '' // PUT YOUR CLASSES HERE SEPERATED BY COMMA AND SPACE
 b = '' // PUT YOUR ROOM NUMBERS HERE SEPERATED BY COMMA AND SPACE
 let classes = a.split(", ")
