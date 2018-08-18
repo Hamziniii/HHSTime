@@ -85,5 +85,5 @@ nextPeriod = currentPeriod != 8 ? currentPeriod + 1 : null
 timeLeft = Math.abs(now - periods[currentPeriod].end)
 timeLeft = ((millis) => {  var minutes = Math.floor(millis / 60000);var seconds = ((millis % 60000) / 1000).toFixed(0);return minutes + ':' + (seconds < 10 ? '0' : '') + seconds;})(timeLeft)
 
-console.log(nextPeriod ? `Period: ${currentPeriod}, \nClass: ${periods[currentPeriod].name} ${periods[currentPeriod].room}, \nTime Left: ${timeLeft}, \nNext Class: ${periods[nextPeriod].name} ${periods[nextPeriod].room}` : `Period: ${currentPeriod}, \nClass: ${periods[currentPeriod].name}, \nTime Left: ${timeLeft}`)
+alert(nextPeriod ? `Period: ${currentPeriod}, \nClass: ${periods[currentPeriod].name} ${periods[currentPeriod].room}, \nTime Left: ${timeLeft}, \nNext Class: ${periods[nextPeriod].name} ${periods[nextPeriod].room}` : `Period: ${currentPeriod}, \nClass: ${periods[currentPeriod].name}, \nTime Left: ${timeLeft}`)
 })()
