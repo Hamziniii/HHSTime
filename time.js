@@ -1,6 +1,6 @@
 javascript(function(){
-a = '' // PUT CLASSES HERE SEPERATED BY SPACE. IF YOUR CLASS HAS A SPACE REPLACE IT WITH AN UNDERSCORE
-b = '' // PUT YOUR ROOM NUMBERS HERE AND SEPERATE THEM BY A SPACE
+a = '' // PUT CLASSES HERE SEPERATED BY SPACE AND COLON
+b = '' // PUT YOUR ROOM NUMBERS HERE AND SEPERATE THEM BY A SPACE AND COLON
 let classes = a.split(", ")
 let rooms = b.split(", ")
 // let classes = ['PLTW', 'AP Physics 1', 'Algebra 2 Honors', 'French 1', 'Lunch', 'Health', 'English 1 Honors', 'AP Human Geography']
