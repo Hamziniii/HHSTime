@@ -1,6 +1,6 @@
 javascript:(function(){
 a = 'Pre-Calc, PE, AP Comp, French 2, Bio BH, Lunch, American Gov B, Eng 2 BH';
-b = 'W1317, W1016, W2009, C1020, W1203, W1307, W1200, W1208'; 
+b = ' ,  ,  ,  ,  ,  ,  ,  '; 
 let classes = a.split(", ");
 let rooms = b.split(", ");
 
